@@ -1,0 +1,7 @@
+__pyache__
+
+.ipynb_checkpoints
+
+*.zip
+
+emails_by_address
