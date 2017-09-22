@@ -1,0 +1,8 @@
+https://pandas.pydata.org/pandas-docs/stable/style.html#Table-Styles
+https://datascience.stackexchange.com/questions/10459/calculation-and-visualization-of-correlation-matrix-with-pandas
+https://stackoverflow.com/questions/29432629/correlation-matrix-using-pandas
+https://stackoverflow.com/questions/36897366/pandas-to-html-using-the-style-options-or-custom-css
+https://stackoverflow.com/questions/30604893/pandas-not-recognizing-nan-as-null
+https://pandas.pydata.org/pandas-docs/stable/missing_data.html
+https://stackoverflow.com/questions/37968730/set-index-name-of-pandas-dataframe
+https://stackoverflow.com/questions/34023918/make-new-column-in-panda-dataframe-by-adding-values-from-other-columns
