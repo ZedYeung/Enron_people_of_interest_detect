@@ -7,7 +7,7 @@ Including:
     SVM,
     KNN,
     GaussianNB
-""""
+"""
 import numpy as np
 import pandas as pd
 from time import time
@@ -36,7 +36,7 @@ def random_forest_classifier(df, features_list=None, weighted=False):
     if features_list is None:
         features_list = [i for i in df.drop('poi', axis=1)]
 
-    features_train, features_test, labelsc_train, labels_test = get_train_test(
+    features_train, features_test, labels_train, labels_test = get_train_test(
         df, features_list=features_list)
 
     if weighted:

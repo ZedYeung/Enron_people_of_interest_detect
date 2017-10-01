@@ -112,7 +112,9 @@ the relationship between the people with the people of interest.
   After that, I just check the nan percantile of every features and removed
 remove the features above 70% nan percent. Obviously, too many nan value would
 make a feature less useful unless it have strong exclusive relationship with
-one of the label.
+one of the label. Actually, I chose 50% threshold at first but I found that the
+70% threshold performs better.In other word, there are some features with higher
+than 50% but lower than 70% nan percent are useful.
 
   And then I visualize the feature distribution to cross-validate that the
 features with high nan percent are useless and remove 'from_messages',
@@ -124,7 +126,8 @@ their various range.
   What is more, I apply PCA on "exercised_stock_options",
 "restricted_stock", "total_stock_value" into a new feature 'stock_pca'
 since they are highly correlated. If the PCA applied on all features, the
-result just not good.
+result just not good, no matter how many Principal components are used because
+the first principal component already large enough.
 
   When I use the random forest classifier on the features, I get the feature
 importances as below:  
