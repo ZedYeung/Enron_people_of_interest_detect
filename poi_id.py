@@ -56,6 +56,7 @@ def classifier_shuffle_split_test(df, features_list,
         if "poi" not in features_list:
             features_list = ["poi"] + features_list
         test_classifier(clf, my_dataset, features_list)
+
 # Task 1: Select what features you'll use.
 # features_list is a list of strings, each of which is a feature name.
 # The first feature must be "poi".
@@ -171,7 +172,9 @@ features.append("stock_pca")
 # Note that if you want to do PCA or other multi-stage operations,
 # you'll need to use Pipelines. For more info:
 # http://scikit-learn.org/stable/modules/pipeline.html
-classifier_test(df_stock_pca)
+
+# Uncomment this to test all classifier
+# classifier_test(df_stock_pca)
 
 # I noticed that both long_term_incentive and deferred_income are appeared
 # on the last three importances in both random forest and adaboost.

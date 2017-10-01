@@ -52,7 +52,7 @@ def random_forest_classifier(df, features_list=None, weighted=False):
 
     clf = RandomForestClassifier(random_state=42, class_weight="balanced",
                                  oob_score=True, min_samples_leaf=2,
-                                 n_jobs=-1)
+                                 n_jobs=1)
 
     clf = GridSearchCV(clf, param_grid, scoring=scoring, verbose=0)
 

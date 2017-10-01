@@ -109,12 +109,15 @@ to percent of the according total email number and
 removed these three original features. Because the percent can better indicate
 the relationship between the people with the people of interest.
 
-  After that, I just check the nan percantile of every features and removed
+  After that, I just check the nan percent of every features and removed
 remove the features above 70% nan percent. Obviously, too many nan value would
 make a feature less useful unless it have strong exclusive relationship with
-one of the label. Actually, I chose 50% threshold at first but I found that the
-70% threshold performs better.In other word, there are some features with higher
-than 50% but lower than 70% nan percent are useful.
+one of the label. Actually, I chose 50% threshold at first and I found that the
+70% threshold performs as good as the 50%, both get 0.91 f1 score in classification_report
+on test set using random forest. But I decided to keep more features for further testing.
+What is more, the distribution of two features with nan percent between 0.5 and 0.7 seems useful.
+Actually, in the end, all the features having nan percent higher than 0.5 were removed.
+But I just want to do it step by step to slowly explore the features.
 
   And then I visualize the feature distribution to cross-validate that the
 features with high nan percent are useless and remove 'from_messages',
@@ -163,7 +166,9 @@ importances as below:
 
   I noticed that both long_term_incentive and deferred_income are appeared on the last three importances in both random forest and adaboost. Consequently and last but not least, I remove them and make my final features.
 
-
+  Of course, I also try automated feature selection process like k-best, the result is
+  not bad- f1 score near 0.4, but just cannot compare with the final result I get. Since I have enough time
+  to explore the relation between feature and trained model, I prefer to get my had dirty.
 
 #### What algorithm did you end up using? What other one(s) did you try? How did model performance differ between algorithms?  [relevant rubric item: “pick an algorithm”]
 
